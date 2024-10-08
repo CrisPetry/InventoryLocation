@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: InventoryLocation
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: Cativan2776*
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+
+spring-doc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+    resolve-schema-properties: true
+  auto-tag-classes: true
+
+
+
