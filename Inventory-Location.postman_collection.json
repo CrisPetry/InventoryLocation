@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "a5560b33-5adb-4acb-8621-f6ea7e701ddd",
+		"name": "Inventory-Location",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19410012"
+	},
+	"item": [
+		{
+			"name": "create-inventory-location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"warehouseId\": 1,\r\n  \"sectionId\": \"A\",\r\n  \"shelfId\": 1,\r\n  \"positionId\": 1,\r\n  \"itemName\": \"Widget A\",\r\n  \"quantity\": 100,\r\n  \"lastUpdate\": \"2024-10-06\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/inventory-locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory-locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-inventory-location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/inventory-locations/1/A/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory-locations",
+						"1",
+						"A",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-inventory-location",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/inventory-locations/1/A/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory-locations",
+						"1",
+						"A",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-all-paginated",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/inventory-locations?page=1&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory-locations"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
